@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+	<!-- SITE TITTLE -->
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Auto Mart</title>
+
+	<!-- CSS STYLE -->
+	<link href="css/bootstrap.min.css" rel="stylesheet">
+	<link href="css/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+	<link href="css/nice-select.css" rel="stylesheet">
+	<link href="css/style.css" rel="stylesheet">
+	<link href="img/favicon.png" rel="shortcut icon">
+</head>
+
+<body class="body-wrapper">
+	<section>
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12">
+					<nav class="navbar navbar-expand-lg  navigation">
+						<a class="navbar-brand" href="index.html">
+							<img src="images/auto-mart.png" alt="">
+						</a>
+						<button class="navbar-toggler" type="button" data-toggle="collapse"
+							data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+							aria-expanded="false" aria-label="Toggle navigation">
+							<span class="navbar-toggler-icon"></span>
+							Menu
+						</button>
+						<div class="collapse navbar-collapse" id="navbarSupportedContent">
+							<ul class="navbar-nav ml-auto main-nav ">
+								<li class="nav-item active">
+									<a class="nav-link" href="index.html">Home</a>
+								</li>
+								<li class="nav-item">
+									<a class="nav-link" href="about.html">About</a>
+								</li>
+								<li class="nav-item">
+									<a class="nav-link" href="contact.html">Contact</a>
+								</li>
+								<li class="nav-item dropdown dropdown-slide">
+									<a class="nav-link dropdown-toggle" href="" data-toggle="dropdown"
+										aria-haspopup="true" aria-expanded="false">
+										Find Cars <span><i class="fa fa-angle-down"></i></span>
+									</a>
+									<!-- Dropdown list -->
+									<div class="dropdown-menu dropdown-menu-right">
+										<a class="dropdown-item"
+											href="#">Available</a>
+										<a class="dropdown-item" href="#">New Cars</a>
+										<a class="dropdown-item" href="#">Used Cars</a>
+									</div>
+								</li>
+							</ul>
+							<ul class="navbar-nav ml-auto mt-10">
+								<li class="nav-item">
+									<a class="nav-link login-button" id="signup-btn" href="signup.html">Sign Up</a>
+								</li>
+								<li class="nav-item">
+									<a class="nav-link login-button" id="signin-btn" href="signin.html">Sign In</a>
+								</li>
+								<li class="nav-item">
+									<a class="nav-link login-button" style="display: none;" id="profile-btn" href="profile.html">
+										<i class="fa fa-user"></i> Profile
+									</a>
+								</li>
+								<li class="nav-item">
+									<a class="nav-link add-button" href="add-listing.html"><i class="fa fa-plus-circle"></i> Add
+										Listing</a>
+								</li>
+							</ul>
+						</div>
+					</nav>
+				</div>
+			</div>
+		</div>
+	</section>
+	<section class="page-search">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12">
+					<!-- Advance Search -->
+					<div class="advance-search">
+						<form>
+							<div class="form-row">
+								<div class="form-group col-md-4">
+									<input type="text" class="form-control" id="inputtext4"
+										placeholder="Car type e.g Sedan">
+								</div>
+								<div class="form-group col-md-3">
+									<input type="text" class="form-control" id="inputCategory4"
+										placeholder="Manufacturer">
+								</div>
+								<div class="form-group col-md-3">
+									<input type="text" class="form-control" id="inputLocation4"
+										placeholder="New or Used">
+								</div>
+								<div class="form-group col-md-2">
+
+									<button type="submit" class="btn btn-primary">Search Now</button>
+								</div>
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!--===================================
+=            Store Section            =
+====================================-->
+	<section class="section bg-gray">
+		<!-- Container Start -->
+		<div class="container">
+			<div class="row">
+				<!-- Left sidebar -->
+				<div class="col-md-8">
+					<div class="product-details">
+						<h1 id="name" class="product-title"></h1>
+						<div class="product-meta">
+							<ul class="list-inline">
+								<li class="list-inline-item"><i class="fa fa-user-o"></i> Listed On <a href=""
+										id="car-date"></a>
+								</li>
+								<li class="list-inline-item"><i class="fa fa-folder-open-o"></i> Manufacturer: <a
+										id="manufacturer" href=""></a></li>
+								<li class="list-inline-item"><i class="fa fa-location-arrow"></i> Status: <a id="status"
+										href=""></a></li>
+							</ul>
+						</div>
+						<div id="carouselExampleIndicators" class="carousel slide mt-3">
+							<img class="card-img-top img-fluid car-ads" id="image" src="" alt="Card image cap">
+						</div>
+						<div class="content">
+							<ul class="nav nav-pills  justify-content-center" id="pills-tab" role="tablist">
+								<li class="nav-item">
+									<a class="nav-link active" id="pills-home-tab" data-toggle="pill" href="#pills-home"
+										role="tab" aria-controls="pills-home" aria-selected="true">Description</a>
+								</li>
+								<li class="nav-item">
+									<a class="nav-link" id="pills-contact-tab" data-toggle="pill" href="#pills-contact"
+										role="tab" aria-controls="pills-contact" aria-selected="false">Reviews</a>
+								</li>
+								<li class="nav-item">
+									<a class="nav-link" id="pills-profile-tab" data-toggle="pill" href="#pills-profile"
+										role="tab" aria-controls="pills-profile" aria-selected="false">Make an Offer</a>
+								</li>
+							</ul>
+							<div class="tab-content" id="pills-tabContent">
+								<div class="tab-pane fade show active" id="pills-home" role="tabpanel"
+									aria-labelledby="pills-home-tab">
+									<h3 class="tab-title">Car Description</h3>
+									<p id="car-desc"></p>
+									Model: <p id="model"></p>
+									Car Condition: <p id="state"></p>
+									Body Type: <p id="body-type"></p>
+								</div>
+								<div class="tab-pane fade" id="pills-contact" role="tabpanel"
+									aria-labelledby="pills-contact-tab">
+									<h3 class="tab-title">Product Review</h3>
+									<div class="product-review">
+										<div class="media">
+											<!-- Avater -->
+											<img src="images/user/user-thumb.jpg" alt="avater">
+											<div class="media-body">
+												<!-- Ratings -->
+												<div class="ratings">
+													<ul class="list-inline">
+														<li class="list-inline-item">
+															<i class="fa fa-star"></i>
+														</li>
+														<li class="list-inline-item">
+															<i class="fa fa-star"></i>
+														</li>
+														<li class="list-inline-item">
+															<i class="fa fa-star"></i>
+														</li>
+														<li class="list-inline-item">
+															<i class="fa fa-star"></i>
+														</li>
+														<li class="list-inline-item">
+															<i class="fa fa-star"></i>
+														</li>
+													</ul>
+												</div>
+												<div class="name">
+													<h5>Jessica Brown</h5>
+												</div>
+												<div class="date">
+													<p>Mar 20, 2018</p>
+												</div>
+												<div class="review-comment">
+													<p>
+														Sed ut perspiciatis unde omnis iste natus error sit voluptatem
+														accusantium doloremqe laudant tota rem ape riamipsa eaque.
+													</p>
+												</div>
+											</div>
+										</div>
+										<div class="review-submission">
+											<h3 class="tab-title">Submit your review</h3>
+											<!-- Rate -->
+											<div class="rate">
+												<div class="starrr"></div>
+											</div>
+											<div class="review-submit">
+												<form action="#" class="row">
+													<div class="col-lg-6">
+														<input type="text" name="name" id="name" class="form-control"
+															placeholder="Name">
+													</div>
+													<div class="col-lg-6">
+														<input type="email" name="email" id="email" class="form-control"
+															placeholder="Email">
+													</div>
+													<div class="col-12">
+														<textarea name="review" id="review" rows="10"
+															class="form-control" placeholder="Message"></textarea>
+													</div>
+													<div class="col-12">
+														<button type="submit" class="btn btn-main">Sumbit</button>
+													</div>
+												</form>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="tab-pane fade" id="pills-profile" role="tabpanel"
+									aria-labelledby="pills-profile-tab">
+									<h3 class="tab-title">Submit an offer</h3>
+									<div class="product-review">
+										<div class="review-submission">
+											<div class="review-submit">
+												<form action="" id="order-form" class="row">
+													<div class="col-12">
+														<input type="text" name="amount" id="offer_price"
+															class="form-control" placeholder="Offer Price">
+													</div>
+													<div class="col-12">
+														<button type="submit" id="order-btn"
+															class="btn btn-main">Sumbit</button>
+													</div>
+												</form>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-4">
+					<div class="sidebar">
+						<div class="widget price text-center">
+							<h4>Price</h4>
+							<p id="car-price"></p>
+						</div>
+						<!-- User Profile widget -->
+						<h3 class="tab-title">Seller Information</h3>
+						<div class="widget user">
+							<img class="rounded" id="seller-pic" src="" alt="">
+							<h4 class="mt-2"><a href="" disabled id="seller-name"></a></h4>
+							<p class="member-time" id="member-date"></p>
+							<a href="seller-ads.html">See all ads</a>
+							<ul class="list-inline mt-20">
+								<li class="list-inline-item"><a href="" class="btn btn-contact">Contact</a></li>
+							</ul>
+						</div>
+						<!-- Rate Widget -->
+						<div style="display: none;" class="widget rate">
+							<!-- Heading -->
+							<h5 class="widget-header text-center">What would you rate
+								<br>
+								this product</h5>
+							<!-- Rate -->
+							<div class="starrr"></div>
+						</div>
+						<!-- Safety tips widget -->
+						<div style="display: none;" class="widget disclaimer">
+							<h5 class="widget-header">Safety Tips</h5>
+							<ul>
+								<li>Meet seller at a public place</li>
+								<li>Check the item before you buy</li>
+								<li>Pay only after collecting the item</li>
+								<li>Pay only after collecting the item</li>
+							</ul>
+						</div>
+						<!-- Coupon Widget -->
+						<div class="widget coupon text-center">
+							<!-- Coupon description -->
+							<p>Have a great product to post ? Hurry up and list.
+							</p>
+							<!-- Submii button -->
+							<a href="" class="btn btn-transparent-white">Submit Listing</a>
+						</div>
+
+					</div>
+				</div>
+
+			</div>
+		</div>
+		<!-- Container End -->
+	</section>
+
+	<!--============================
+=            Footer            =
+=============================-->
+
+	<footer class="footer section section-sm">
+		<!-- Container Start -->
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-3 col-md-7 offset-md-1 offset-lg-0">
+					<!-- About -->
+					<div class="block about">
+						<!-- footer logo -->
+						<img src="images/auto-mart.png" alt="">
+						<!-- description -->
+						<p class="alt-color">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+							tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+							exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+					</div>
+				</div>
+				<!-- Link list -->
+				<div class="col-lg-2 offset-lg-1 col-md-3">
+					<div class="block">
+						<h4>Auto Mart</h4>
+						<ul>
+							<li><a href="#">Home</a></li>
+							<li><a href="#">About</a></li>
+							<li><a href="#">How It works</a></li>
+							<li><a href="#">Contact</a></li>
+							<li><a href="#">Terms of Services</a></li>
+						</ul>
+					</div>
+				</div>
+				<!-- Link list -->
+				<div class="col-lg-2 col-md-3 offset-md-1 offset-lg-0">
+					<div class="block">
+						<h4>Admin</h4>
+						<ul>
+							<li><a href="admin-login.html">Login</a></li>
+						</ul>
+					</div>
+				</div>
+				<!-- Promotion -->
+				<div class="col-lg-4 col-md-7">
+					<!-- App promotion -->
+					<div class="block-2 app-promotion">
+						<a href="">
+							<!-- Icon -->
+							<img src="images/footer/phone-icon.png" alt="mobile-icon">
+						</a>
+						<p>Get the Auto Mart Mobile App and Save more</p>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- Container End -->
+	</footer>
+	<!-- Footer Bottom -->
+	<footer class="footer-bottom">
+		<!-- Container Start -->
+		<div class="container">
+			<div class="row">
+				<div class="col-sm-6 col-12">
+					<!-- Copyright -->
+					<div class="copyright">
+						<p>Copyright © 2019. All Rights Reserved</p>
+					</div>
+				</div>
+				<div class="col-sm-6 col-12">
+					<!-- Social Icons -->
+					<ul class="social-media-icons text-right">
+						<li><a class="fa fa-facebook" href=""></a></li>
+						<li><a class="fa fa-twitter" href=""></a></li>
+						<li><a class="fa fa-pinterest-p" href=""></a></li>
+						<li><a class="fa fa-vimeo" href=""></a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<!-- Container End -->
+		<!-- To Top -->
+		<div class="top-to">
+			<a id="top" class="" href=""><i class="fa fa-angle-up"></i></a>
+		</div>
+	</footer>
+
+
+
+	<!-- JAVASCRIPTS -->
+	<script src="js/plugins/jquery.min.js"></script>
+	<script src="js/plugins/popper.min.js"></script>
+	<script src="js/plugins/bootstrap.min.js"></script>
+	<script src="js/plugins/jquery.nice-select.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/sweetalert2@8.18.6/dist/sweetalert2.all.min.js"></script>
+	<script src="js/scripts.js"></script>
+	<script src="js/main.js"></script>
+	<!-- <script src="js/localhost.js"></script> -->
+	<script>
+		getCar();
+	</script>
+
+
+</body>
+
+</html>

@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <!-- SITE TITTLE -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Purchase Order | Auto Mart</title>
+
+    <!-- CSS STYLE -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+    <link href="css/nice-select.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+    <link href="img/favicon.png" rel="shortcut icon">
+</head>
+
+<body class="body-wrapper">
+    <section>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <nav class="navbar navbar-expand-lg  navigation">
+                        <a class="navbar-brand" href="index.html">
+                            <img src="images/auto-mart.png" alt="">
+                        </a>
+                        <button class="navbar-toggler" type="button" data-toggle="collapse"
+                            data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                            aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                            Menu
+                        </button>
+                        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                            <ul class="navbar-nav ml-auto main-nav ">
+                                <li class="nav-item active">
+                                    <a class="nav-link" href="index.html">Home</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="about.html">About</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="contact.html">Contact</a>
+                                </li>
+                                <li class="nav-item dropdown dropdown-slide">
+                                    <a class="nav-link dropdown-toggle" href="" data-toggle="dropdown"
+                                        aria-haspopup="true" aria-expanded="false">
+                                        Listing <span><i class="fa fa-angle-down"></i></span>
+                                    </a>
+                                    <!-- Dropdown list -->
+                                    <div class="dropdown-menu dropdown-menu-right">
+                                        <a class="dropdown-item" href="#">All Unsold</a>
+                                        <a class="dropdown-item" href="#">All New Cars</a>
+                                        <a class="dropdown-item" href="#">All Used Cars</a>
+                                    </div>
+                                </li>
+                            </ul>
+                            <ul class="navbar-nav ml-auto mt-10">
+                                <li class="nav-item">
+                                    <a class="nav-link login-button" href="signup.html">Sign Up</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link login-button" href="signin.html">Sign In</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link add-button" href="add-listing.html"><i
+                                            class="fa fa-plus-circle"></i> Add
+                                        Listing</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="page-search">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <!-- Advance Search -->
+                    <div class="advance-search">
+                        <form>
+                            <div class="form-row">
+                                <div class="form-group col-md-4">
+                                    <input type="text" class="form-control" id="inputtext4"
+                                        placeholder="Car type e.g Sedan">
+                                </div>
+                                <div class="form-group col-md-3">
+                                    <input type="text" class="form-control" id="inputCategory4"
+                                        placeholder="Manufacturer">
+                                </div>
+                                <div class="form-group col-md-3">
+                                    <input type="text" class="form-control" id="inputLocation4"
+                                        placeholder="New or Used">
+                                </div>
+                                <div class="form-group col-md-2">
+
+                                    <button type="submit" class="btn btn-primary">Search Now</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="user-profile section">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-10 offset-md-1 col-lg-8 offset-lg-0">
+                    <div class="widget personal-info">
+                        <h3 class="widget-header user">Buyer Personal Information</h3>
+                        <form method="" action="" enctype="multipart/form-data">
+                            <!-- First Name -->
+                            <div class="form-group">
+                                <label for="first-name">First Name</label>
+                                <input value="" name="firstName" type="text" class="form-control" id="first-name">
+                            </div>
+                            <!-- Last Name -->
+                            <div class="form-group">
+                                <label for="last-name">Last Name</label>
+                                <input value="" name="lastName" type="text" class="form-control" id="last-name">
+                            </div>
+
+                            <h3 class="widget-header user">Buyer Contact Information</h3>
+                            <!-- Phone -->
+                            <div class="form-group">
+                                <label for="phone">Phone 1</label>
+                                <input value="" name="phone" type="text" class="form-control" id="phone">
+                            </div>
+                            <!-- Phone -->
+                            <div class="form-group">
+                                <label for="phone">Phone 2</label>
+                                <input value="" name="phone-two" type="text" class="form-control" id="phone">
+                            </div>
+                            <!-- Email -->
+                            <div class="form-group">
+                                <label for="email">Email</label>
+                                <input value="" name="email" type="email" class="form-control" id="current-email">
+                            </div>
+
+                            <h3 class="widget-header user">Delivery Information</h3>
+                            <!-- Address -->
+                            <div class="form-group">
+                                <label for="address">Delivery Address</label>
+                                <input value="" name="address" type="text" class="form-control" id="address">
+                            </div>
+                            <!-- State -->
+                            <div class="form-group">
+                                <label for="zip-code">State</label>
+                                <input value="" name="state" type="text" class="form-control" id="state">
+                            </div>
+                            <!-- City -->
+                            <div class="form-group">
+                                <label for="zip-code">City</label>
+                                <input value="" name="city" type="text" class="form-control" id="city">
+                            </div>
+
+                            <h3 class="widget-header user">Offer Information</h3>
+                            <!-- Car Name -->
+                            <div class="form-group">
+                                <label for="car-name">Car Name</label>
+                                <input value="" name="carName" type="text" class="form-control" id="car-name">
+                            </div>
+                            <!-- Manufacturer -->
+                            <div class="form-group">
+                                <label for="manufacturer">Manufacturer</label>
+                                <input value="" name="carManufacturer" type="text" class="form-control"
+                                    id="manufacturer">
+                            </div>
+                            <!-- Body Type -->
+                            <div class="form-group">
+                                <label for="nody-type">Body Type</label>
+                                <input value="" name="bodyType" type="text" class="form-control" id="body-type">
+                            </div>
+                            <!-- Price -->
+                            <div class="form-group">
+                                <label for="price">Offer Price</label>
+                                <input value="" name="offerPrice" type="text" class="form-control" id="price">
+                            </div>
+
+                            <!-- Submit button -->
+                            <button name="submit" type="submit" class="btn btn-transparent">Submit</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!--============================
+=            Footer            =
+=============================-->
+
+    <footer class="footer section section-sm">
+        <!-- Container Start -->
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3 col-md-7 offset-md-1 offset-lg-0">
+                    <!-- About -->
+                    <div class="block about">
+                        <!-- footer logo -->
+                        <img src="images/auto-mart.png" alt="">
+                        <!-- description -->
+                        <p class="alt-color">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+                            exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                    </div>
+                </div>
+                <!-- Link list -->
+                <div class="col-lg-2 offset-lg-1 col-md-3">
+                    <div class="block">
+                        <h4>Auto Mart</h4>
+                        <ul>
+                            <li><a href="#">Home</a></li>
+                            <li><a href="#">About</a></li>
+                            <li><a href="#">How It works</a></li>
+                            <li><a href="#">Contact</a></li>
+                            <li><a href="#">Terms of Services</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- Link list -->
+                <div class="col-lg-2 col-md-3 offset-md-1 offset-lg-0">
+                    <div class="block">
+                        <h4>Admin</h4>
+                        <ul>
+                            <li><a href="admin-login.html">Login</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- Promotion -->
+                <div class="col-lg-4 col-md-7">
+                    <!-- App promotion -->
+                    <div class="block-2 app-promotion">
+                        <a href="">
+                            <!-- Icon -->
+                            <img src="images/footer/phone-icon.png" alt="mobile-icon">
+                        </a>
+                        <p>Get the Auto Mart Mobile App and Save more</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Container End -->
+    </footer>
+    <!-- Footer Bottom -->
+    <footer class="footer-bottom">
+        <!-- Container Start -->
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-6 col-12">
+                    <!-- Copyright -->
+                    <div class="copyright">
+                        <p>Copyright © 2019. All Rights Reserved</p>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-12">
+                    <!-- Social Icons -->
+                    <ul class="social-media-icons text-right">
+                        <li><a class="fa fa-facebook" href=""></a></li>
+                        <li><a class="fa fa-twitter" href=""></a></li>
+                        <li><a class="fa fa-pinterest-p" href=""></a></li>
+                        <li><a class="fa fa-vimeo" href=""></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <!-- Container End -->
+        <!-- To Top -->
+        <div class="top-to">
+            <a id="top" class="" href=""><i class="fa fa-angle-up"></i></a>
+        </div>
+    </footer>
+
+
+
+    <!-- JAVASCRIPTS -->
+    <script src="js/plugins/jquery.min.js"></script>
+    <script src="js/plugins/popper.min.js"></script>
+    <script src="js/plugins/bootstrap.min.js"></script>
+    <script src="js/plugins/jquery.nice-select.min.js"></script>
+    <script src="js/scripts.js"></script>
+
+
+</body>
+
+</html>
