@@ -51,9 +51,9 @@
 									<!-- Dropdown list -->
 									<div class="dropdown-menu dropdown-menu-right">
 										<a class="dropdown-item"
-											href="#">Available</a>
-										<a class="dropdown-item" href="#">New Cars</a>
-										<a class="dropdown-item" href="#">Used Cars</a>
+											href="available-cars.html">Available</a>
+										<a class="dropdown-item" href="new-cars.html">New Cars</a>
+										<a class="dropdown-item" href="used-cars.html">Used Cars</a>
 									</div>
 								</li>
 							</ul>
@@ -104,7 +104,7 @@
 								<!-- Store Search -->
 								<div class="col-lg-2 col-md-12">
 									<div class="block d-flex">
-										<select name="manufacturer" class="form-control mb-2 mr-sm-2 mb-sm-0"
+										<select required name="manufacturer" class="form-control mb-2 mr-sm-2 mb-sm-0"
 											id="manufacturer">
 											<option value="manufacturer">Manufacturer</option>
 											<option value="Mercedez">Mercedes</option>
@@ -119,7 +119,7 @@
 
 								<div class="col-lg-2 col-md-12">
 									<div class="block d-flex">
-										<select name="state" class="form-control mb-2 mr-sm-2 mb-sm-0" id="state">
+										<select required name="state" class="form-control mb-2 mr-sm-2 mb-sm-0" id="state">
 											<option value="state">State</option>
 											<option value="new">New</option>
 											<option value="used">Used</option>
@@ -149,7 +149,7 @@
 
 								<div class="col-lg-2 col-md-12">
 									<div class="block d-flex">
-										<input value="999999" type="number" class="form-control mb-2 mr-sm-2 mb-sm-0"
+										<input value="1000000" type="number" class="form-control mb-2 mr-sm-2 mb-sm-0"
 											id="max-price" placeholder="Max Price">
 									</div>
 								</div>
@@ -192,7 +192,7 @@
 
 				<!-- End product cards-->
 			</div>
-			<a href="all-listings.html" class="btn btn-transparent" id="more-btn">View More</a>
+			<a href="all-listings.html" style="display: none;" class="btn btn-transparent" id="more-btn">View More</a>
 		</div>
 	</section>
 
@@ -292,7 +292,7 @@
 	<script src="js/plugins/jquery.nice-select.min.js"></script>
 	<script src="js/scripts.js"></script>
 	<script src="js/main.js"></script>
-	<!-- <script src="js/localhost.js"></script> -->
+	<script src="js/inc-search.js"></script>
 
 </body>
 

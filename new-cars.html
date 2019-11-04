@@ -46,23 +46,34 @@
                                 <li class="nav-item dropdown dropdown-slide">
                                     <a class="nav-link dropdown-toggle" href="" data-toggle="dropdown"
                                         aria-haspopup="true" aria-expanded="false">
-                                        Listing <span><i class="fa fa-angle-down"></i></span>
+                                        Find Cars <span><i class="fa fa-angle-down"></i></span>
                                     </a>
                                     <!-- Dropdown list -->
                                     <div class="dropdown-menu dropdown-menu-right">
-                                        <a class="dropdown-item" href="unsold-cars.html">All Unsold</a>
-                                        <a class="dropdown-item" href="new-cars.html">All New Cars</a>
-                                        <a class="dropdown-item" href="used-cars.html">All Used Cars</a>
+                                        <a class="dropdown-item"
+                                            href="available-cars.html">Available</a>
+                                        <a class="dropdown-item" href="new-cars.html">New Cars</a>
+                                        <a class="dropdown-item" href="used-cars.html">Used Cars</a>
                                     </div>
                                 </li>
                             </ul>
                             <ul class="navbar-nav ml-auto mt-10">
                                 <li class="nav-item">
-                                    <a class="nav-link login-button" href="signup.html">Sign Up</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link add-button" href="signin.html">Sign In</a>
-                                </li>
+									<a class="nav-link login-button" id="signup-btn" href="signup.html">Sign Up</a>
+								</li>
+								<li class="nav-item" style="margin-right: 5px;">
+									<a class="nav-link add-button" id="signin-btn" href="signin.html">Sign In</a>
+								</li>
+								<li class="nav-item">
+									<a class="nav-link login-button" style="display: none;" id="profile-btn" href="profile.html">
+										<i class="fa fa-user"></i> Profile
+									</a>
+								</li>
+								<li class="nav-item">
+									<a class="nav-link add-button" href="add-listing.html">
+										<i class="fa fa-plus-circle"></i> Add Listing
+									</a>
+								</li>
                             </ul>
                         </div>
                     </nav>
@@ -79,21 +90,42 @@
                     <div class="advance-search">
                         <form>
                             <div class="form-row">
-                                <div class="form-group col-md-4">
-                                    <input type="text" class="form-control" id="inputtext4"
-                                        placeholder="Car type e.g Sedan">
+                                <div class="form-group col-md-3 mb-1">
+                                    <select name="manufacturer" class="form-control" id="manufacturer">
+                                        <option>Manufacturer</option>
+                                        <option value="Mercedez">Mercedes</option>
+                                        <option value="BMW">BMW</option>
+                                        <option value="Toyota">Toyota</option>
+                                        <option value="Audi">Audi</option>
+                                        <option value="ferrari">Ferrari</option>
+                                        <option value="Lamborghini">Lamborghini</option>
+                                    </select>
                                 </div>
-                                <div class="form-group col-md-3">
-                                    <input type="text" class="form-control" id="inputCategory4"
-                                        placeholder="Manufacturer">
+                                <div class="form-group col-md-2 mb-1">
+                                    <select name="body-type" class="form-control" id="state">
+                                        <option>State</option>
+                                        <option value="new">New</option>
+                                        <option value="used">Used</option>
+                                    </select>
                                 </div>
-                                <div class="form-group col-md-3">
-                                    <input type="text" class="form-control" id="inputLocation4"
-                                        placeholder="New or Used">
+                                <div class="form-group col-md-2 mb-1">
+                                    <select name="body-type" class="form-control" id="body-type">
+                                        <option value="">Body Type</option>
+                                        <option value="SUV">SUV</option>
+                                        <option value="Sedan">Sedan</option>
+                                        <option value="Convertible">Convertible</option>
+                                    </select>
                                 </div>
-                                <div class="form-group col-md-2">
-
-                                    <button type="submit" class="btn btn-primary">Search Now</button>
+                                <div class="form-group col-md-2 mb-1">
+                                    <input value="0" id="min-price" type="number" class="form-control" id="inputLocation4"
+                                        placeholder="Lowest Price">
+                                </div>
+                                <div class="form-group col-md-2 mb-1">
+                                    <input value="1000000" id="max-price" type="number" class="form-control" id="inputLocation4"
+                                        placeholder="Highest Price">
+                                </div>
+                                <div class="form-group col-md-1">
+                                    <button type="submit" class="btn btn-primary" id="search-btn2">Search Now</button>
                                 </div>
                             </div>
                         </form>
@@ -108,8 +140,8 @@
             <div class="row">
                 <div class="col-md-12">
                     <div class="search-result bg-gray">
-                        <h2>All "Available New" Cars</h2>
-                        <p>43 Ads Found</p>
+                        <h2>All New Cars</h2>
+                        <p id="new-count"></p>
                     </div>
                 </div>
             </div>
@@ -119,24 +151,24 @@
                         <div class="widget category-list">
                             <h4 class="widget-header">All Manufacturers</h4>
                             <ul class="category-list">
-                                <li><a href="category.html">Mercedes <span>93</span></a></li>
-                                <li><a href="category.html">Audi <span>233</span></a></li>
-                                <li><a href="category.html">BMW <span>183</span></a></li>
-                                <li><a href="category.html">Toyota <span>343</span></a></li>
-                                <li><a href="category.html">Kia <span>343</span></a></li>
-                                <li><a href="category.html">Chevrolet <span>343</span></a></li>
+                                <li><a href="#">Mercedes <span>93</span></a></li>
+                                <li><a href="#">Audi <span>233</span></a></li>
+                                <li><a href="#">BMW <span>183</span></a></li>
+                                <li><a href="#">Toyota <span>343</span></a></li>
+                                <li><a href="#">Kia <span>343</span></a></li>
+                                <li><a href="#">Chevrolet <span>343</span></a></li>
                             </ul>
                         </div>
 
                         <div class="widget category-list">
                             <h4 class="widget-header">Body Type</h4>
                             <ul class="category-list">
-                                <li><a href="category.html">Sedan <span>93</span></a></li>
-                                <li><a href="category.html">Convertible <span>233</span></a></li>
-                                <li><a href="category.html">Wagon <span>183</span></a></li>
-                                <li><a href="category.html">Salon <span>120</span></a></li>
-                                <li><a href="category.html">Pick Up <span>40</span></a></li>
-                                <li><a href="category.html">SUV <span>81</span></a></li>
+                                <li><a href="#">Sedan <span>93</span></a></li>
+                                <li><a href="#">Convertible <span>233</span></a></li>
+                                <li><a href="#">Wagon <span>183</span></a></li>
+                                <li><a href="#">Salon <span>120</span></a></li>
+                                <li><a href="#">Pick Up <span>40</span></a></li>
+                                <li><a href="#">SUV <span>81</span></a></li>
                             </ul>
                         </div>
 
@@ -195,368 +227,9 @@
                         </div>
                     </div>
                     <div class="product-grid-list">
-                        <div class="row mt-30">
-                            <div class="col-sm-12 col-lg-4 col-md-6">
+                        <div class="row mt-30" id="prod-card">
                                 <!-- product card -->
-                                <div class="product-item bg-light">
-                                    <div class="card">
-                                        <div class="thumb-content">
-                                            <!-- <div class="price">$200</div> -->
-                                            <a href="">
-                                                <img class="card-img-top img-fluid" src="images/products/products-1.jpg"
-                                                    alt="Card image cap">
-                                            </a>
-                                        </div>
-                                        <div class="card-body">
-                                            <h4 class="card-title"><a href="">11inch Macbook Air</a></h4>
-                                            <ul class="list-inline product-meta">
-                                                <li class="list-inline-item">
-                                                    <a href=""><i class="fa fa-car"></i>Ferrari</a>
-                                                </li>
-                                                <li class="list-inline-item">
-                                                    <a href=""><i class="fa fa-calendar"></i>5th January</a>
-                                                </li>
-                                            </ul>
-                                            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing
-                                                elit. Explicabo, aliquam!</p>
-                                            <div class="product-ratings">
-                                                <ul class="list-inline">
-                                                    <li class="list-inline-item selected"><i class="fa fa-star"></i>
-                                                    </li>
-                                                    <li class="list-inline-item selected"><i class="fa fa-star"></i>
-                                                    </li>
-                                                    <li class="list-inline-item selected"><i class="fa fa-star"></i>
-                                                    </li>
-                                                    <li class="list-inline-item selected"><i class="fa fa-star"></i>
-                                                    </li>
-                                                    <li class="list-inline-item"><i class="fa fa-star"></i></li>
-                                                </ul>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-sm-12 col-lg-4 col-md-6">
-                                <!-- product card -->
-                                <div class="product-item bg-light">
-                                    <div class="card">
-                                        <div class="thumb-content">
-                                            <!-- <div class="price">$200</div> -->
-                                            <a href="">
-                                                <img class="card-img-top img-fluid" src="images/products/products-2.jpg"
-                                                    alt="Card image cap">
-                                            </a>
-                                        </div>
-                                        <div class="card-body">
-                                            <h4 class="card-title"><a href="">Study Table Combo</a></h4>
-                                            <ul class="list-inline product-meta">
-                                                <li class="list-inline-item">
-                                                    <a href=""><i class="fa fa-folder-open-o"></i>Furnitures</a>
-                                                </li>
-                                                <li class="list-inline-item">
-                                                    <a href=""><i class="fa fa-calendar"></i>26th December</a>
-                                                </li>
-                                            </ul>
-                                            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing
-                                                elit. Explicabo, aliquam!</p>
-                                            <div class="product-ratings">
-                                                <ul class="list-inline">
-                                                    <li class="list-inline-item selected"><i class="fa fa-star"></i>
-                                                    </li>
-                                                    <li class="list-inline-item selected"><i class="fa fa-star"></i>
-                                                    </li>
-                                                    <li class="list-inline-item selected"><i class="fa fa-star"></i>
-                                                    </li>
-                                                    <li class="list-inline-item selected"><i class="fa fa-star"></i>
-                                                    </li>
-                                                    <li class="list-inline-item"><i class="fa fa-star"></i></li>
-                                                </ul>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-
-                            </div>
-                            <div class="col-sm-12 col-lg-4 col-md-6">
-                                <!-- product card -->
-                                <div class="product-item bg-light">
-                                    <div class="card">
-                                        <div class="thumb-content">
-                                            <!-- <div class="price">$200</div> -->
-                                            <a href="">
-                                                <img class="card-img-top img-fluid" src="images/products/products-3.jpg"
-                                                    alt="Card image cap">
-                                            </a>
-                                        </div>
-                                        <div class="card-body">
-                                            <h4 class="card-title"><a href="">11inch Macbook Air</a></h4>
-                                            <ul class="list-inline product-meta">
-                                                <li class="list-inline-item">
-                                                    <a href=""><i class="fa fa-folder-open-o"></i>Electronics</a>
-                                                </li>
-                                                <li class="list-inline-item">
-                                                    <a href=""><i class="fa fa-calendar"></i>26th December</a>
-                                                </li>
-                                            </ul>
-                                            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing
-                                                elit. Explicabo, aliquam!</p>
-                                            <div class="product-ratings">
-                                                <ul class="list-inline">
-                                                    <li class="list-inline-item selected"><i class="fa fa-star"></i>
-                                                    </li>
-                                                    <li class="list-inline-item selected"><i class="fa fa-star"></i>
-                                                    </li>
-                                                    <li class="list-inline-item selected"><i class="fa fa-star"></i>
-                                                    </li>
-                                                    <li class="list-inline-item selected"><i class="fa fa-star"></i>
-                                                    </li>
-                                                    <li class="list-inline-item"><i class="fa fa-star"></i></li>
-                                                </ul>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-sm-12 col-lg-4 col-md-6">
-                                <!-- product card -->
-                                <div class="product-item bg-light">
-                                    <div class="card">
-                                        <div class="thumb-content">
-                                            <!-- <div class="price">$200</div> -->
-                                            <a href="">
-                                                <img class="card-img-top img-fluid" src="images/products/products-1.jpg"
-                                                    alt="Card image cap">
-                                            </a>
-                                        </div>
-                                        <div class="card-body">
-                                            <h4 class="card-title"><a href="">11inch Macbook Air</a></h4>
-                                            <ul class="list-inline product-meta">
-                                                <li class="list-inline-item">
-                                                    <a href=""><i class="fa fa-folder-open-o"></i>Electronics</a>
-                                                </li>
-                                                <li class="list-inline-item">
-                                                    <a href=""><i class="fa fa-calendar"></i>26th December</a>
-                                                </li>
-                                            </ul>
-                                            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing
-                                                elit. Explicabo, aliquam!</p>
-                                            <div class="product-ratings">
-                                                <ul class="list-inline">
-                                                    <li class="list-inline-item selected"><i class="fa fa-star"></i>
-                                                    </li>
-                                                    <li class="list-inline-item selected"><i class="fa fa-star"></i>
-                                                    </li>
-                                                    <li class="list-inline-item selected"><i class="fa fa-star"></i>
-                                                    </li>
-                                                    <li class="list-inline-item selected"><i class="fa fa-star"></i>
-                                                    </li>
-                                                    <li class="list-inline-item"><i class="fa fa-star"></i></li>
-                                                </ul>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-sm-12 col-lg-4 col-md-6">
-                                <!-- product card -->
-                                <div class="product-item bg-light">
-                                    <div class="card">
-                                        <div class="thumb-content">
-                                            <!-- <div class="price">$200</div> -->
-                                            <a href="">
-                                                <img class="card-img-top img-fluid" src="images/products/products-2.jpg"
-                                                    alt="Card image cap">
-                                            </a>
-                                        </div>
-                                        <div class="card-body">
-                                            <h4 class="card-title"><a href="">Study Table Combo</a></h4>
-                                            <ul class="list-inline product-meta">
-                                                <li class="list-inline-item">
-                                                    <a href=""><i class="fa fa-folder-open-o"></i>Furnitures</a>
-                                                </li>
-                                                <li class="list-inline-item">
-                                                    <a href=""><i class="fa fa-calendar"></i>26th December</a>
-                                                </li>
-                                            </ul>
-                                            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing
-                                                elit. Explicabo, aliquam!</p>
-                                            <div class="product-ratings">
-                                                <ul class="list-inline">
-                                                    <li class="list-inline-item selected"><i class="fa fa-star"></i>
-                                                    </li>
-                                                    <li class="list-inline-item selected"><i class="fa fa-star"></i>
-                                                    </li>
-                                                    <li class="list-inline-item selected"><i class="fa fa-star"></i>
-                                                    </li>
-                                                    <li class="list-inline-item selected"><i class="fa fa-star"></i>
-                                                    </li>
-                                                    <li class="list-inline-item"><i class="fa fa-star"></i></li>
-                                                </ul>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-sm-12 col-lg-4 col-md-6">
-                                <!-- product card -->
-                                <div class="product-item bg-light">
-                                    <div class="card">
-                                        <div class="thumb-content">
-                                            <!-- <div class="price">$200</div> -->
-                                            <a href="">
-                                                <img class="card-img-top img-fluid" src="images/products/products-3.jpg"
-                                                    alt="Card image cap">
-                                            </a>
-                                        </div>
-                                        <div class="card-body">
-                                            <h4 class="card-title"><a href="">11inch Macbook Air</a></h4>
-                                            <ul class="list-inline product-meta">
-                                                <li class="list-inline-item">
-                                                    <a href=""><i class="fa fa-folder-open-o"></i>Electronics</a>
-                                                </li>
-                                                <li class="list-inline-item">
-                                                    <a href=""><i class="fa fa-calendar"></i>26th December</a>
-                                                </li>
-                                            </ul>
-                                            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing
-                                                elit. Explicabo, aliquam!</p>
-                                            <div class="product-ratings">
-                                                <ul class="list-inline">
-                                                    <li class="list-inline-item selected"><i class="fa fa-star"></i>
-                                                    </li>
-                                                    <li class="list-inline-item selected"><i class="fa fa-star"></i>
-                                                    </li>
-                                                    <li class="list-inline-item selected"><i class="fa fa-star"></i>
-                                                    </li>
-                                                    <li class="list-inline-item selected"><i class="fa fa-star"></i>
-                                                    </li>
-                                                    <li class="list-inline-item"><i class="fa fa-star"></i></li>
-                                                </ul>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-sm-12 col-lg-4 col-md-6">
-                                <!-- product card -->
-                                <div class="product-item bg-light">
-                                    <div class="card">
-                                        <div class="thumb-content">
-                                            <!-- <div class="price">$200</div> -->
-                                            <a href="">
-                                                <img class="card-img-top img-fluid" src="images/products/products-1.jpg"
-                                                    alt="Card image cap">
-                                            </a>
-                                        </div>
-                                        <div class="card-body">
-                                            <h4 class="card-title"><a href="">11inch Macbook Air</a></h4>
-                                            <ul class="list-inline product-meta">
-                                                <li class="list-inline-item">
-                                                    <a href=""><i class="fa fa-folder-open-o"></i>Electronics</a>
-                                                </li>
-                                                <li class="list-inline-item">
-                                                    <a href=""><i class="fa fa-calendar"></i>26th December</a>
-                                                </li>
-                                            </ul>
-                                            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing
-                                                elit. Explicabo, aliquam!</p>
-                                            <div class="product-ratings">
-                                                <ul class="list-inline">
-                                                    <li class="list-inline-item selected"><i class="fa fa-star"></i>
-                                                    </li>
-                                                    <li class="list-inline-item selected"><i class="fa fa-star"></i>
-                                                    </li>
-                                                    <li class="list-inline-item selected"><i class="fa fa-star"></i>
-                                                    </li>
-                                                    <li class="list-inline-item selected"><i class="fa fa-star"></i>
-                                                    </li>
-                                                    <li class="list-inline-item"><i class="fa fa-star"></i></li>
-                                                </ul>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-sm-12 col-lg-4 col-md-6">
-                                <!-- product card -->
-                                <div class="product-item bg-light">
-                                    <div class="card">
-                                        <div class="thumb-content">
-                                            <!-- <div class="price">$200</div> -->
-                                            <a href="">
-                                                <img class="card-img-top img-fluid" src="images/products/products-2.jpg"
-                                                    alt="Card image cap">
-                                            </a>
-                                        </div>
-                                        <div class="card-body">
-                                            <h4 class="card-title"><a href="">Study Table Combo</a></h4>
-                                            <ul class="list-inline product-meta">
-                                                <li class="list-inline-item">
-                                                    <a href=""><i class="fa fa-folder-open-o"></i>Furnitures</a>
-                                                </li>
-                                                <li class="list-inline-item">
-                                                    <a href=""><i class="fa fa-calendar"></i>26th December</a>
-                                                </li>
-                                            </ul>
-                                            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing
-                                                elit. Explicabo, aliquam!</p>
-                                            <div class="product-ratings">
-                                                <ul class="list-inline">
-                                                    <li class="list-inline-item selected"><i class="fa fa-star"></i>
-                                                    </li>
-                                                    <li class="list-inline-item selected"><i class="fa fa-star"></i>
-                                                    </li>
-                                                    <li class="list-inline-item selected"><i class="fa fa-star"></i>
-                                                    </li>
-                                                    <li class="list-inline-item selected"><i class="fa fa-star"></i>
-                                                    </li>
-                                                    <li class="list-inline-item"><i class="fa fa-star"></i></li>
-                                                </ul>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-sm-12 col-lg-4 col-md-6">
-                                <!-- product card -->
-                                <div class="product-item bg-light">
-                                    <div class="card">
-                                        <div class="thumb-content">
-                                            <!-- <div class="price">$200</div> -->
-                                            <a href="">
-                                                <img class="card-img-top img-fluid" src="images/products/products-3.jpg"
-                                                    alt="Card image cap">
-                                            </a>
-                                        </div>
-                                        <div class="card-body">
-                                            <h4 class="card-title"><a href="">11inch Macbook Air</a></h4>
-                                            <ul class="list-inline product-meta">
-                                                <li class="list-inline-item">
-                                                    <a href=""><i class="fa fa-folder-open-o"></i>Electronics</a>
-                                                </li>
-                                                <li class="list-inline-item">
-                                                    <a href=""><i class="fa fa-calendar"></i>26th December</a>
-                                                </li>
-                                            </ul>
-                                            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing
-                                                elit. Explicabo, aliquam!</p>
-                                            <div class="product-ratings">
-                                                <ul class="list-inline">
-                                                    <li class="list-inline-item selected"><i class="fa fa-star"></i>
-                                                    </li>
-                                                    <li class="list-inline-item selected"><i class="fa fa-star"></i>
-                                                    </li>
-                                                    <li class="list-inline-item selected"><i class="fa fa-star"></i>
-                                                    </li>
-                                                    <li class="list-inline-item selected"><i class="fa fa-star"></i>
-                                                    </li>
-                                                    <li class="list-inline-item"><i class="fa fa-star"></i></li>
-                                                </ul>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
+                           
                         </div>
                     </div>
                     <div class="pagination justify-content-center">
@@ -679,6 +352,8 @@
     <script src="js/plugins/bootstrap.min.js"></script>
     <script src="js/plugins/jquery.nice-select.min.js"></script>
     <script src="js/scripts.js"></script>
+    <script src="js/new.js"></script>
+    <script src="js/inc-search.js"></script>
 
 
 </body>

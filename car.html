@@ -44,18 +44,18 @@
 									<a class="nav-link" href="contact.html">Contact</a>
 								</li>
 								<li class="nav-item dropdown dropdown-slide">
-									<a class="nav-link dropdown-toggle" href="" data-toggle="dropdown"
-										aria-haspopup="true" aria-expanded="false">
-										Find Cars <span><i class="fa fa-angle-down"></i></span>
-									</a>
-									<!-- Dropdown list -->
-									<div class="dropdown-menu dropdown-menu-right">
-										<a class="dropdown-item"
-											href="#">Available</a>
-										<a class="dropdown-item" href="#">New Cars</a>
-										<a class="dropdown-item" href="#">Used Cars</a>
-									</div>
-								</li>
+                                    <a class="nav-link dropdown-toggle" href="" data-toggle="dropdown"
+                                        aria-haspopup="true" aria-expanded="false">
+                                        Find Cars <span><i class="fa fa-angle-down"></i></span>
+                                    </a>
+                                    <!-- Dropdown list -->
+                                    <div class="dropdown-menu dropdown-menu-right">
+                                        <a class="dropdown-item"
+                                            href="available-cars.html">Available</a>
+                                        <a class="dropdown-item" href="new-cars.html">New Cars</a>
+                                        <a class="dropdown-item" href="used-cars.html">Used Cars</a>
+                                    </div>
+                                </li>
 							</ul>
 							<ul class="navbar-nav ml-auto mt-10">
 								<li class="nav-item">
@@ -87,25 +87,46 @@
 					<!-- Advance Search -->
 					<div class="advance-search">
 						<form>
-							<div class="form-row">
-								<div class="form-group col-md-4">
-									<input type="text" class="form-control" id="inputtext4"
-										placeholder="Car type e.g Sedan">
-								</div>
-								<div class="form-group col-md-3">
-									<input type="text" class="form-control" id="inputCategory4"
-										placeholder="Manufacturer">
-								</div>
-								<div class="form-group col-md-3">
-									<input type="text" class="form-control" id="inputLocation4"
-										placeholder="New or Used">
-								</div>
-								<div class="form-group col-md-2">
-
-									<button type="submit" class="btn btn-primary">Search Now</button>
-								</div>
-							</div>
-						</form>
+                            <div class="form-row">
+                                <div class="form-group col-md-3 mb-1">
+                                    <select name="manufacturer" class="form-control" id="search">
+                                        <option>Manufacturer</option>
+                                        <option value="Mercedez">Mercedes</option>
+                                        <option value="BMW">BMW</option>
+                                        <option value="Toyota">Toyota</option>
+                                        <option value="Audi">Audi</option>
+                                        <option value="ferrari">Ferrari</option>
+                                        <option value="Lamborghini">Lamborghini</option>
+                                    </select>
+                                </div>
+                                <div class="form-group col-md-2 mb-1">
+                                    <select name="body-type" class="form-control" id="search">
+                                        <option>State</option>
+                                        <option value="new">New</option>
+                                        <option value="used">Used</option>
+                                    </select>
+                                </div>
+                                <div class="form-group col-md-2 mb-1">
+                                    <select name="body-type" class="form-control" id="search">
+                                        <option value="">Body Type</option>
+                                        <option value="SUV">SUV</option>
+                                        <option value="Sedan">Sedan</option>
+                                        <option value="Convertible">Convertible</option>
+                                    </select>
+                                </div>
+                                <div class="form-group col-md-2 mb-1">
+                                    <input value="0" name="lowest_price" type="number" class="form-control" id="inputLocation4"
+                                        placeholder="Lowest Price">
+                                </div>
+                                <div class="form-group col-md-2 mb-1">
+                                    <input value="999999" name="highest_price" type="number" class="form-control" id="inputLocation4"
+                                        placeholder="Highest Price">
+                                </div>
+                                <div class="form-group col-md-1">
+                                    <button type="submit" class="btn btn-primary">Search Now</button>
+                                </div>
+                            </div>
+                        </form>
 					</div>
 				</div>
 			</div>
@@ -166,44 +187,48 @@
 									<h3 class="tab-title">Product Review</h3>
 									<div class="product-review">
 										<div class="media">
+												
 											<!-- Avater -->
-											<img src="images/user/user-thumb.jpg" alt="avater">
+											<img style="display: none;" src="" alt="avater">
 											<div class="media-body">
+													<h3 class="tab-title">Coming soon...</h3>
 												<!-- Ratings -->
-												<div class="ratings">
-													<ul class="list-inline">
-														<li class="list-inline-item">
-															<i class="fa fa-star"></i>
-														</li>
-														<li class="list-inline-item">
-															<i class="fa fa-star"></i>
-														</li>
-														<li class="list-inline-item">
-															<i class="fa fa-star"></i>
-														</li>
-														<li class="list-inline-item">
-															<i class="fa fa-star"></i>
-														</li>
-														<li class="list-inline-item">
-															<i class="fa fa-star"></i>
-														</li>
-													</ul>
-												</div>
-												<div class="name">
-													<h5>Jessica Brown</h5>
-												</div>
-												<div class="date">
-													<p>Mar 20, 2018</p>
-												</div>
-												<div class="review-comment">
-													<p>
-														Sed ut perspiciatis unde omnis iste natus error sit voluptatem
-														accusantium doloremqe laudant tota rem ape riamipsa eaque.
-													</p>
+												<div style="display: none;">
+													<div class="ratings">
+														<ul class="list-inline">
+															<li class="list-inline-item">
+																<i class="fa fa-star"></i>
+															</li>
+															<li class="list-inline-item">
+																<i class="fa fa-star"></i>
+															</li>
+															<li class="list-inline-item">
+																<i class="fa fa-star"></i>
+															</li>
+															<li class="list-inline-item">
+																<i class="fa fa-star"></i>
+															</li>
+															<li class="list-inline-item">
+																<i class="fa fa-star"></i>
+															</li>
+														</ul>
+													</div>
+													<div class="name">
+														<h5>Jessica Brown</h5>
+													</div>
+													<div class="date">
+														<p>Mar 20, 2018</p>
+													</div>
+													<div class="review-comment">
+														<p>
+															Sed ut perspiciatis unde omnis iste natus error sit voluptatem
+															accusantium doloremqe laudant tota rem ape riamipsa eaque.
+														</p>
+													</div>
 												</div>
 											</div>
 										</div>
-										<div class="review-submission">
+										<div class="review-submission" style="display: none;">
 											<h3 class="tab-title">Submit your review</h3>
 											<!-- Rate -->
 											<div class="rate">
@@ -233,14 +258,27 @@
 								</div>
 								<div class="tab-pane fade" id="pills-profile" role="tabpanel"
 									aria-labelledby="pills-profile-tab">
-									<h3 class="tab-title">Submit an offer</h3>
 									<div class="product-review">
 										<div class="review-submission">
+											<table class="table table-bordered" id="table">
+												<thead>
+													<tr>
+														<th scope="col">Order Id</th>
+														<th scope="col">Amount</th>
+														<th scope="col">Date</th>
+														<th scope="col">Status</th>
+													</tr>
+												</thead>
+												<tbody id="order-table">
+													
+												</tbody>
+											</table>
+											<h3 class="tab-title">Submit an offer</h3>
 											<div class="review-submit">
 												<form action="" id="order-form" class="row">
 													<div class="col-12">
 														<input type="text" name="amount" id="offer_price"
-															class="form-control" placeholder="Offer Price">
+															class="form-control" placeholder="Enter value without comma e.g 30000">
 													</div>
 													<div class="col-12">
 														<button type="submit" id="order-btn"
@@ -267,7 +305,7 @@
 							<img class="rounded" id="seller-pic" src="" alt="">
 							<h4 class="mt-2"><a href="" disabled id="seller-name"></a></h4>
 							<p class="member-time" id="member-date"></p>
-							<a href="seller-ads.html">See all ads</a>
+							<a id="seller-ads" href="seller-ads.html">See all ads</a>
 							<ul class="list-inline mt-20">
 								<li class="list-inline-item"><a href="" class="btn btn-contact">Contact</a></li>
 							</ul>
@@ -297,7 +335,7 @@
 							<p>Have a great product to post ? Hurry up and list.
 							</p>
 							<!-- Submii button -->
-							<a href="" class="btn btn-transparent-white">Submit Listing</a>
+							<a href="add-listing.html" class="btn btn-transparent-white">Submit Listing</a>
 						</div>
 
 					</div>
@@ -402,11 +440,8 @@
 	<script src="js/plugins/jquery.nice-select.min.js"></script>
 	<script src="https://cdn.jsdelivr.net/npm/sweetalert2@8.18.6/dist/sweetalert2.all.min.js"></script>
 	<script src="js/scripts.js"></script>
-	<script src="js/main.js"></script>
-	<!-- <script src="js/localhost.js"></script> -->
-	<script>
-		getCar();
-	</script>
+	<script src="js/car.js"></script>
+	<script> getCar(); </script>
 
 
 </body>
