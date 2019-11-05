@@ -115,3 +115,7 @@ const viewOrder = () => {
             }
         }).catch(err => console.log(err));
 }
+
+document.getElementById('search-btn2').addEventListener('click', () => {
+    search();
+});
